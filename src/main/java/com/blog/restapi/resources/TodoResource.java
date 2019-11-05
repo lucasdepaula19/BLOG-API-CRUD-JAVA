@@ -1,7 +1,7 @@
-package com.kodnito.restapi.resources;
+package com.blog.restapi.resources;
 
-import com.kodnito.restapi.dao.TodoDAO;
-import com.kodnito.restapi.models.Todo;
+import com.blog.restapi.dao.TodoDAO;
+import com.blog.restapi.models.Todo;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;

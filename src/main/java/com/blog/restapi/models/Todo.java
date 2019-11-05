@@ -1,4 +1,4 @@
-package com.kodnito.restapi.models;
+package com.blog.restapi.models;
 
 import java.io.Serializable;
 import javax.persistence.Entity;

@@ -1,6 +1,6 @@
-package com.kodnito.restapi.dao;
+package com.blog.restapi.dao;
 
-import com.kodnito.restapi.models.Todo;
+import com.blog.restapi.models.Todo;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

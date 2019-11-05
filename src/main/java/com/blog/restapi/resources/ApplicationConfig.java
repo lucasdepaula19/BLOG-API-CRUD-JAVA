@@ -1,4 +1,4 @@
-package com.kodnito.resources;
+package com.blog.resources;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
