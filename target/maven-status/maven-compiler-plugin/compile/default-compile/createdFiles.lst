@@ -1,0 +1,4 @@
+com/kodnito/restapi/resources/TodoResource.class
+com/kodnito/restapi/dao/TodoDAO.class
+com/kodnito/restapi/models/Todo.class
+com/kodnito/resources/ApplicationConfig.class
