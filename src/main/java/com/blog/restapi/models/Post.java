@@ -59,7 +59,6 @@ public class Post implements Serializable {
 
     @Override
     public String toString() {
-        return "Post{" + "id=" + id + ", title_post=" + title_post + ", desc_post=" + desc_post + ", id_autor_post=" + id_autor_post + '}';
+       return "Post{" + "id=" + id + ", title_post=" + title_post + ", desc_post=" + desc_post + ", id_autor_post=" + id_autor_post + '}';
     }
-
 }
