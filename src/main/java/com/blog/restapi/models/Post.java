@@ -10,7 +10,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "posts")
+@Table(name = "x_posts")
 @NamedQueries({
     @NamedQuery(name = "Post.findAll", query = "SELECT t FROM Post t")
 })
@@ -21,9 +21,9 @@ public class Post implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String task;
-    private String description;
-    /* private String teste; */
+    private String title_post;
+    private String desc_post;
+    private Long id_autor_post;
 
     public Long getId() {
         return id;
@@ -33,33 +33,33 @@ public class Post implements Serializable {
         this.id = id;
     }
 
-    public String getTask() {
-        return task;
+    public String getTitle_post() {
+        return title_post;
     }
 
-    public void setTask(String task) {
-        this.task = task;
+    public void setTitle_post(String title_post) {
+        this.title_post = title_post;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDesc_post() {
+        return desc_post;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDesc_post(String desc_post) {
+        this.desc_post = desc_post;
     }
 
-/*     public String getTeste() {
-        return teste;
+    public Long getId_autor_post() {
+        return id_autor_post;
     }
 
-    public void setTeste(String teste) {
-        this.teste = teste;
-    } */
+    public void setId_autor_post(Long id_autor_post) {
+        this.id_autor_post = id_autor_post;
+    }
 
     @Override
     public String toString() {
-        return "Post{" + "id=" + id + ", task=" + task + ", description=" + description + /* ", teste=" + teste + */ '}';
+        return "Post{" + "id=" + id + ", title_post=" + title_post + ", desc_post=" + desc_post + ", id_autor_post=" + id_autor_post + '}';
     }
 
 }

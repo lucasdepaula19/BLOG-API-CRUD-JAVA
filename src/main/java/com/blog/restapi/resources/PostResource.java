@@ -42,9 +42,9 @@ public class PostResource {
     public Response update(@PathParam("id") Long id, Post post) {
         Post updatePost = postDAO.findById(id);
 
-        updatePost.setTask(post.getTask());
-        updatePost.setDescription(post.getDescription());
-        /* updatePost.setTeste(post.getTeste()); */
+        updatePost.setTitle_post(post.getTitle_post());
+        updatePost.setDesc_post(post.getDesc_post());
+        updatePost.setId_autor_post(post.getId_autor_post());
         postDAO.update(updatePost);
 
         return Response.ok().build();
