@@ -10,11 +10,11 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "todos")
+@Table(name = "posts")
 @NamedQueries({
-    @NamedQuery(name = "Todo.findAll", query = "SELECT t FROM Todo t")
+    @NamedQuery(name = "Post.findAll", query = "SELECT t FROM Post t")
 })
-public class Todo implements Serializable {
+public class Post implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -23,6 +23,7 @@ public class Todo implements Serializable {
     private Long id;
     private String task;
     private String description;
+    /* private String teste; */
 
     public Long getId() {
         return id;
@@ -48,9 +49,17 @@ public class Todo implements Serializable {
         this.description = description;
     }
 
+/*     public String getTeste() {
+        return teste;
+    }
+
+    public void setTeste(String teste) {
+        this.teste = teste;
+    } */
+
     @Override
     public String toString() {
-        return "Todo{" + "id=" + id + ", task=" + task + ", description=" + description + '}';
+        return "Post{" + "id=" + id + ", task=" + task + ", description=" + description + /* ", teste=" + teste + */ '}';
     }
 
 }

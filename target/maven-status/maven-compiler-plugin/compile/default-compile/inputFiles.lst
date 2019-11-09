@@ -1,4 +1,4 @@
-/home/lucas/Documentos/GIT/projetos_java/BLOG-API-CRUD-JAVA/src/main/java/com/blog/restapi/resources/TodoResource.java
 /home/lucas/Documentos/GIT/projetos_java/BLOG-API-CRUD-JAVA/src/main/java/com/blog/restapi/resources/ApplicationConfig.java
-/home/lucas/Documentos/GIT/projetos_java/BLOG-API-CRUD-JAVA/src/main/java/com/blog/restapi/models/Todo.java
-/home/lucas/Documentos/GIT/projetos_java/BLOG-API-CRUD-JAVA/src/main/java/com/blog/restapi/dao/TodoDAO.java
+/home/lucas/Documentos/GIT/projetos_java/BLOG-API-CRUD-JAVA/src/main/java/com/blog/restapi/dao/PostDAO.java
+/home/lucas/Documentos/GIT/projetos_java/BLOG-API-CRUD-JAVA/src/main/java/com/blog/restapi/resources/PostResource.java
+/home/lucas/Documentos/GIT/projetos_java/BLOG-API-CRUD-JAVA/src/main/java/com/blog/restapi/models/Post.java

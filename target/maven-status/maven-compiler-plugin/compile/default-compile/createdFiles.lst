@@ -1,4 +1,4 @@
+com/blog/restapi/dao/PostDAO.class
 com/blog/resources/ApplicationConfig.class
-com/blog/restapi/dao/TodoDAO.class
-com/blog/restapi/models/Todo.class
-com/blog/restapi/resources/TodoResource.class
+com/blog/restapi/models/Post.class
+com/blog/restapi/resources/PostResource.class

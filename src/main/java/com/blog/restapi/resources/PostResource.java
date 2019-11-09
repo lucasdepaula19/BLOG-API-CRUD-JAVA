@@ -1,7 +1,7 @@
 package com.blog.restapi.resources;
 
-import com.blog.restapi.dao.TodoDAO;
-import com.blog.restapi.models.Todo;
+import com.blog.restapi.dao.PostDAO;
+import com.blog.restapi.models.Post;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -16,51 +16,52 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @RequestScoped
-@Path("todos")
+@Path("posts")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class TodoResource {
+public class PostResource {
 
     @Inject
-    TodoDAO todoDAO;
+    PostDAO postDAO;
 
     @GET
     public Response getAll() {
-        return Response.ok(todoDAO.getAll()).build();
+        return Response.ok(postDAO.getAll()).build();
     }
 
     @GET
     @Path("{id}")
-    public Response getTodo(@PathParam("id") Long id) {
-        Todo todo = todoDAO.findById(id);
+    public Response getPost(@PathParam("id") Long id) {
+        Post post = postDAO.findById(id);
 
-        return Response.ok(todo).build();
+        return Response.ok(post).build();
     }
 
     @PUT
     @Path("{id}")
-    public Response update(@PathParam("id") Long id, Todo todo) {
-        Todo updateTodo = todoDAO.findById(id);
+    public Response update(@PathParam("id") Long id, Post post) {
+        Post updatePost = postDAO.findById(id);
 
-        updateTodo.setTask(todo.getTask());
-        updateTodo.setDescription(todo.getDescription());
-        todoDAO.update(updateTodo);
+        updatePost.setTask(post.getTask());
+        updatePost.setDescription(post.getDescription());
+        /* updatePost.setTeste(post.getTeste()); */
+        postDAO.update(updatePost);
 
         return Response.ok().build();
     }
 
     @POST
-    public Response create(Todo todo) {
-        todoDAO.create(todo);
+    public Response create(Post post) {
+        postDAO.create(post);
         return Response.ok().build();
     }
 
     @DELETE
     @Path("{id}")
     public Response delete(@PathParam("id") Long id) {
-        Todo getTodo = todoDAO.findById(id);
+        Post getPost = postDAO.findById(id);
         
-        todoDAO.delete(getTodo);
+        postDAO.delete(getPost);
 
         return Response.ok().build();
     }
