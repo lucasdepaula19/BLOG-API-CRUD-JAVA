@@ -2,6 +2,9 @@ com/blog/restapi/resources/AutorResource.class
 com/blog/restapi/models/Autor.class
 com/blog/restapi/models/Post.class
 com/blog/restapi/resources/PostResource.class
+com/blog/restapi/models/Comment.class
+com/blog/restapi/resources/CommentResource.class
 com/blog/restapi/dao/PostDAO.class
 com/blog/resources/ApplicationConfig.class
+com/blog/restapi/dao/CommentDAO.class
 com/blog/restapi/dao/AutorDAO.class
