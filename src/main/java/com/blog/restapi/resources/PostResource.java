@@ -14,6 +14,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
 
 @RequestScoped
 @Path("posts")
@@ -33,6 +34,14 @@ public class PostResource {
     @Path("{id}")
     public Response getPost(@PathParam("id") Long id) {
         Post post = postDAO.findById(id);
+
+        return Response.ok(post).build();
+    }
+
+    @GET
+    @Path("/autor/{id}")
+    public Response getPostAutor(@PathParam("id") Long id) {
+        List<Post> post = postDAO.findByAutor(id);
 
         return Response.ok(post).build();
     }
