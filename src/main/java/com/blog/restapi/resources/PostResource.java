@@ -39,7 +39,7 @@ public class PostResource {
     }
 
     @GET
-    @Path("/autor/{id}")
+    @Path("/author/{id}")
     public Response getPostAutor(@PathParam("id") Long id) {
         List<Post> post = postDAO.findByAutor(id);
 
