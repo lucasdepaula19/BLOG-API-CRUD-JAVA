@@ -2,6 +2,7 @@ package com.blog.restapi.resources;
 
 import com.blog.restapi.dao.PostDAO;
 import com.blog.restapi.models.Post;
+import com.blog.restapi.models.PostComment;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -41,7 +42,7 @@ public class PostResource {
     @GET
     @Path("/author/{id}")
     public Response getPostAutor(@PathParam("id") Long id) {
-        List<Post> post = postDAO.findByAutor(id);
+        List<PostComment> post = postDAO.findByAutor(id);
 
         return Response.ok(post).build();
     }
