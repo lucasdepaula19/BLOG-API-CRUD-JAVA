@@ -7,7 +7,7 @@
  # API_METODOS
 
  * **POST**
- http://localhost:8080/restapi/api/posts
+ http://localhost:8080/restapi/api/posts <br>
  http://localhost:8080/restapi/api/authors
  http://localhost:8080/restapi/api/comments
 
