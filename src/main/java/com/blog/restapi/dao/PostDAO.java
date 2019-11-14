@@ -17,7 +17,34 @@ public class PostDAO {
     EntityManager em;
 
     public List getAll() {
-        return em.createNamedQuery("Post.findAll", Post.class).getResultList();
+        List<Post> resultsPost = em.createNamedQuery("Post.findAll", Post.class).getResultList();
+
+        List<PostComment> postReturn = new ArrayList<PostComment>();
+
+        for(Post result : resultsPost){
+            PostComment linhaReturn = new PostComment();
+            
+            /* Post post = new Post();
+            post.setId(result.getId()); */
+
+            linhaReturn.setPostagem(new Post());
+
+            linhaReturn.getPostagem().setId(result.getId());
+            linhaReturn.getPostagem().setTitle_post(result.getTitle_post());
+            linhaReturn.getPostagem().setDesc_post(result.getDesc_post());
+            linhaReturn.getPostagem().setId_autor_post(result.getId_autor_post());
+
+            Long id_Postagem = result.getId();
+            //Query para retornar todos comentários de uma postagem
+            TypedQuery<Comment> queryComment = em.createQuery("SELECT t FROM Comment t WHERE t.id_post_comment = :id_Postagem", Comment.class);
+            List<Comment> resultsComment = queryComment.setParameter("id_Postagem", id_Postagem).getResultList();
+ 
+            linhaReturn.setComentarios(resultsComment);
+            
+            postReturn.add(linhaReturn);
+        }
+
+        return postReturn;
     }
 
     public Post findById(Long id) {
