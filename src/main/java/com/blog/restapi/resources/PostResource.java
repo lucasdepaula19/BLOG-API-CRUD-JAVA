@@ -34,7 +34,7 @@ public class PostResource {
     @GET
     @Path("{id}")
     public Response getPost(@PathParam("id") Long id) {
-        Post post = postDAO.findById(id);
+        PostComment post = postDAO.findById(id);
 
         return Response.ok(post).build();
     }
@@ -50,7 +50,7 @@ public class PostResource {
     @PUT
     @Path("{id}")
     public Response update(@PathParam("id") Long id, Post post) {
-        Post updatePost = postDAO.findById(id);
+        Post updatePost = postDAO.findByIdPost(id);
 
         updatePost.setTitle_post(post.getTitle_post());
         updatePost.setDesc_post(post.getDesc_post());
@@ -69,7 +69,7 @@ public class PostResource {
     @DELETE
     @Path("{id}")
     public Response delete(@PathParam("id") Long id) {
-        Post getPost = postDAO.findById(id);
+        Post getPost = postDAO.findByIdPost(id);
         
         postDAO.delete(getPost);
 
