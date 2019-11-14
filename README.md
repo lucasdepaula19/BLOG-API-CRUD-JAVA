@@ -6,22 +6,22 @@
 
  # API_METODOS
 
- * **POST**
+ * **POST** <br>
  http://localhost:8080/restapi/api/posts <br>
  http://localhost:8080/restapi/api/authors <br>
  http://localhost:8080/restapi/api/comments <br>
 
- * **DEL**
+ * **DEL** <br>
  http://localhost:8080/restapi/api/posts/2 <br>
  http://localhost:8080/restapi/api/authors/251 <br>
  http://localhost:8080/restapi/api/comments/351 <br>
 
- * **PUT**
+ * **PUT** <br>
  http://localhost:8080/restapi/api/posts/502 <br>
  http://localhost:8080/restapi/api/authors/4 <br>
  http://localhost:8080/restapi/api/comments/4 <br>
 
- * **GET**
+ * **GET** <br>
  http://localhost:8080/restapi/api/posts/ <br>
  http://localhost:8080/restapi/api/comments/ <br>
  http://localhost:8080/restapi/api/posts/502 <br>
